@@ -12,9 +12,13 @@ int main (int argc, char *agrv[]) {
     setlocale(LC_ALL, "");
 
     WINDOW *statusWindow;
+    WINDOW *qsoDetailsWin;
+    WINDOW *extendedWin;
+    WINDOW *popupWin;
 
     initscr();
     noecho();
+    cbreak();
     
     int hasColor = has_colors();
 
@@ -37,8 +41,13 @@ int main (int argc, char *agrv[]) {
     // Deal with status window
     statusWindow = create_status_window();
     print_in_middle(statusWindow, 0, 0, 0,"Status Bar");
+
+    updateStatusWindowText(statusWindow, 1, 1, "Starting Up...");
+
     wrefresh(statusWindow);
 
+    refresh();
+    // Create 2 panels.
     getch();
 
     endwin();
