@@ -3,7 +3,13 @@
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
+#if __FreeBSD__
+// why not seperate headers for wide support?!?!? 
+#include <ncurses/curses.h>
+#endif
+#if __linux__
 #include <ncursesw/curses.h>
+#endif
 #include "status_win.h"
 #include "utils.h"
 
