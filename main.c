@@ -53,12 +53,17 @@ int main (int argc, char *agrv[]) {
 
     wrefresh(statusWindow);
 
+    acl_menu_init();
+    acl_print_menu();
+
+
     refresh();
 
-    // Create 3 panels.
     // Send user into the menu
-    getch();
+    acl_process_menu_input();
 
+
+    acl_menu_clearup();
     endwin();
     return 0;
 }

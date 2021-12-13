@@ -7,10 +7,18 @@ char *choices[] = {
 			"Exit",
 		  };
 			
-void menu_init() {
+void acl_menu_init() {
 
 }
 
-void print_menu() {
+void acl_print_menu() {
+
+}
+
+void acl_process_menu_input() {
+    getch();
+}
+
+void acl_menu_clearup() {
 
 }
