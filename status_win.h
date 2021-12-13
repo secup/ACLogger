@@ -6,5 +6,6 @@
 #include <ncurses/curses.h>
 
 WINDOW* create_status_window(void);
+void updateStatusWindowText(WINDOW *win, int startx, int starty, char *string); 
 
 #endif

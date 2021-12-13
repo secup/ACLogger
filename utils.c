@@ -24,17 +24,3 @@ void print_in_middle(WINDOW *win, int starty, int startx, int width, char *strin
 	mvwprintw(win, y, x, "%s", string);
 	refresh();
 }
-
-void updateStatusWindowText(WINDOW *win, int startx, int starty, char *string) {
-    if (!win) { return; }
-
-    int width, length;
-
-    // Get window length and erase that line.
-    getmaxyx(win, length, width);
-
-    mvwaddstr(win, starty, startx, string); 
-    
-    wrefresh(win);
-
-}

@@ -12,6 +12,7 @@
 #endif
 #include "status_win.h"
 #include "utils.h"
+#include "menu.h"
 
 int main (int argc, char *agrv[]) {
 
@@ -53,7 +54,9 @@ int main (int argc, char *agrv[]) {
     wrefresh(statusWindow);
 
     refresh();
-    // Create 2 panels.
+
+    // Create 3 panels.
+    // Send user into the menu
     getch();
 
     endwin();

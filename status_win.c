@@ -12,3 +12,17 @@ WINDOW* create_status_window() {
 
     return statusWindow;
 }
+
+void updateStatusWindowText(WINDOW *win, int startx, int starty, char *string) {
+    if (!win) { return; }
+
+    int width, length;
+
+    // Get window length and erase that line.
+    getmaxyx(win, length, width);
+
+    mvwaddstr(win, starty, startx, string); 
+    
+    wrefresh(win);
+
+}

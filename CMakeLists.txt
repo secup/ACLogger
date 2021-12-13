@@ -13,7 +13,7 @@ set(CURSES_NEED_WIDE TRUE)
 
 endif()
 find_package(Curses REQUIRED)
-add_executable(logger main.c status_win.c utils.c)
+add_executable(logger main.c status_win.c utils.c menu.c)
 
 target_link_libraries(logger PUBLIC ncursesw)
 
